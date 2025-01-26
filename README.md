@@ -1,4 +1,4 @@
-# Script destinado al procesamiento de imágenes para webs
+# Procesamiento de imágenes para webs
 
 Este proyecto está diseñado para procesar imágenes de un directorio objetivo dado, generando un nuevo directorio donde residan las imágenes procesadas y minificadas.
 
@@ -17,6 +17,7 @@ Para utilizar este proyecto, sigue los siguientes pasos:
 1. Clona el repositorio en tu equipo local.
 2. Instala las dependencias necesarias, definidas en el fichero 'requirements.txt', en tu entorno virtual.
 3. Ejecuta el script principal `script.py` proporcionando el directorio de imágenes objetivo y el directorio de salida para las imágenes procesadas.
+4. Revisa la ruta de destino y echa un vistazo a las imágenes procesadas y listas para utilizar.
 
 ## Ejemplo de Ejecución
 
