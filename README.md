@@ -12,6 +12,11 @@ El proyecto contiene los siguientes archivos y directorios:
 
 ## Uso
 
+Para poder utilizar este script de la forma esperada, es necesario obtener una clave (key) para la API de Tinify. Puedes obtener más información al respecto
+accediendo al siguiente [enlace](https://tinypng.com/developers).
+
+Una vez hayas obtenido tu API-KEY, define un fichero .env dentro del entorno virtual, y crea una clave cuyo valor almacene tu API-KEY. De forma gratuita, tendrás acceso a 500 compresiones mensuales.
+
 Para utilizar este proyecto, sigue los siguientes pasos:
 
 1. Clona el repositorio en tu equipo local.
@@ -24,3 +29,10 @@ Para utilizar este proyecto, sigue los siguientes pasos:
 ```sh
 python script.py --input_dir /ruta/al/directorio/de/imagenes --output_dir /ruta/al/directorio/de/salida
 ```
+
+## Contacto
+
+Si tienes preguntas, comentarios, o deseas discutir sobre posibles colaboraciones, no dudes en contactarme.
+
+* **Email**: padish_dev@proton.me
+* **LinkedIn**: [David Padilla Muñoz](https://www.linkedin.com/in/david-padilla-mu%C3%B1oz-52126725a/)

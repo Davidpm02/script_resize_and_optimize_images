@@ -32,7 +32,7 @@ def check_connection():
         return False
 
 
-def minify_image(image_path, output_path):
+def minify(image_path, output_path):
     
     """
     Minifica una imagen utilizando la API de Minify.

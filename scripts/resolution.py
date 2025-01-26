@@ -6,7 +6,7 @@ procesamiento de la resolución en las imágenes que se desean procesar.
 # IMPORTS -----
 import os
 from PIL import Image
-from minify_images import minify_image
+from .minify_images import minify
 
 # FUNCTIONS -----
 
@@ -51,14 +51,14 @@ def process_image(image_path, output_path):
                             ((width - new_img.width) // 2,
                              (height - new_img.height) // 2))
             
-            # Guardar la imagen optimizada en formato PNG
+            # Guardo la imagen en formato PNG
             final_img.save(os.path.join(output_path, new_image_name),
                            format="PNG",
                            optimize=True)
             
             # Minifico la imagen resultante
-            minify_image(os.path.join(output_path, new_image_name),
-                         os.path.join(output_path, new_image_name))
+            minify(os.path.join(output_path, new_image_name),
+                   os.path.join(output_path, new_image_name))
             
     except Exception as e:
         print(f'No ha sido posible procesar la imagen {image_name}: {e}')
