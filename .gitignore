@@ -5,3 +5,6 @@
 
 # Cache de Python
 __pycache__/
+
+# Variables de entorno
+.env
