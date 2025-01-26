@@ -1,4 +1,4 @@
-# Script destinado al procesamiento de imágenes para webs
+# Procesamiento de imágenes para webs
 
 Este proyecto está diseñado para procesar imágenes de un directorio objetivo dado, generando un nuevo directorio donde residan las imágenes procesadas y minificadas.
 
