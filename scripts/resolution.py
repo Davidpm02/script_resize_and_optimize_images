@@ -12,6 +12,22 @@ from PIL import Image, ImageOps
 
 def process_image(image_path, output_path):
     
+    """
+    Se encarga de aplicar el procesamiento necesario a una imagen de
+    entrada, para cambiar su resolución y optimizarla en formato PNG.
+    
+    La imagen resultante se almacena en el directorio de salida.
+    
+    params:
+        image_path: str
+            Ruta de la imagen a procesar.
+        output_path: str
+            Ruta donde se almacenará la imagen procesada.
+    
+    returns:
+        None
+    """
+    
     # Nombre de la imagen
     image_name = os.path.basename(image_path)
     new_image_name = os.path.splitext(image_name)[0] + '.png'
