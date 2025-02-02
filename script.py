@@ -24,9 +24,13 @@ if __name__ == "__main__":
         assert (os.path.exists(input_dir))
         assert (os.path.exists(output_dir))
         
-        # Consulamos al usuario las dimensiones deseadas de las imágenes
+        # Consultamos al usuario las dimensiones deseadas de las imágenes
         desired_width = int(input("Introduce el ancho deseado de las imágenes: "))
         desired_height = int(input("Introduce el alto deseado de las imágenes: "))
+        
+        # Verificamos que las dimensiones introducidas son válidas
+        assert (desired_width > 0)
+        assert (desired_height > 0)
         
         # Lista con las extensiones de imágenes permitidas
         image_extensions = ["webp", "png", "jpg", "jpeg", "heif"]
@@ -63,5 +67,5 @@ if __name__ == "__main__":
             shutil.rmtree(temp_directory)
             print(f'Las imágenes procesadas se han almacenado correctamente en: {output_dir}.')
     except AssertionError:
-        print("Asegúrate de que has introducido correctamente las rutas de los directorios.")
+        print("Asegúrate de que has introducido correctamente las rutas de los directorios y que las dimensiones de salida con válidas.")
         
