@@ -10,7 +10,7 @@ from .minify_images import minify
 
 # FUNCTIONS -----
 
-def process_image(image_path, output_path):
+def process_image(image_path, output_path, desired_width, desired_height):
     
     """
     Se encarga de aplicar el procesamiento necesario a una imagen de
@@ -23,7 +23,10 @@ def process_image(image_path, output_path):
             Ruta de la imagen a procesar.
         output_path: str
             Ruta donde se almacenará la imagen procesada.
-    
+        desired_width: int
+            Ancho deseado de la imagen.
+        desired_height: int
+            Alto deseado de la imagen.
     returns:
         None
     """
@@ -32,24 +35,20 @@ def process_image(image_path, output_path):
     image_name = os.path.basename(image_path)
     new_image_name = os.path.splitext(image_name)[0] + '.png'
     
-    # Dimensiones de salida
-    width = 600
-    height = 315
-    
     try:
         with Image.open(image_path) as img:
             
             # Redimensiono la imagen
-            new_img = img.resize((width, height),
+            new_img = img.resize((desired_width, desired_height),
                                  Image.LANCZOS)
             
             # Creo una nueva imagen con el tamaño exacto y pego
             # la imagen redimensionada en el centro.
             final_img = Image.new("RGB",
-                                  (width, height))
+                                  (desired_width, desired_height))
             final_img.paste(new_img,
-                            ((width - new_img.width) // 2,
-                             (height - new_img.height) // 2))
+                            ((desired_width - new_img.width) // 2,
+                             (desired_height - new_img.height) // 2))
             
             # Guardo la imagen en formato PNG
             final_img.save(os.path.join(output_path, new_image_name),

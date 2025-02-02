@@ -24,6 +24,10 @@ if __name__ == "__main__":
         assert (os.path.exists(input_dir))
         assert (os.path.exists(output_dir))
         
+        # Consulamos al usuario las dimensiones deseadas de las imágenes
+        desired_width = int(input("Introduce el ancho deseado de las imágenes: "))
+        desired_height = int(input("Introduce el alto deseado de las imágenes: "))
+        
         # Lista con las extensiones de imágenes permitidas
         image_extensions = ["webp", "png", "jpg", "jpeg", "heif"]
         
@@ -50,7 +54,9 @@ if __name__ == "__main__":
         for image in os.listdir(temp_directory):
             # Procesamos la imagen (cambio de resolución y optimización).
             process_image(os.path.join(temp_directory, image),
-                          output_dir) 
+                          output_dir,
+                          desired_width,
+                          desired_height) 
             
         else:
             # Elimino el directorio temporal
