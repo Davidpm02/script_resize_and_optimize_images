@@ -26,7 +26,7 @@ Para utilizar este proyecto, sigue los siguientes pasos:
 
 ## Ejemplo de ejecución
 
-Una vez hayas clonado el contenido del repositorio, accede al directorio en cuestión y ejecuta el fichero `script.py`. En este caso, puedes ejecutar el fichero desde la propia terminal, enviando las rutas absolutas del directorio de imágenes que quieres procesar, y el directorio donde quieras almacenar las imágenes resultantes (envía estas rutas en los parámetros `--input_dir` y `output_dir`, respectivamente).
+Una vez hayas clonado el contenido del repositorio, accede al directorio en cuestión y ejecuta el fichero `script.py`. En este caso, puedes ejecutar el fichero desde la propia terminal, enviando las rutas absolutas del directorio de imágenes que quieres procesar, y el directorio donde quieras almacenar las imágenes resultantes (envía estas rutas en los parámetros `--input_dir` y `--output_dir`, respectivamente).
 
 ```sh
 python script.py --input_dir /ruta/al/directorio/de/imagenes --output_dir /ruta/al/directorio/de/salida
