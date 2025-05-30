@@ -25,8 +25,12 @@ if __name__ == "__main__":
         assert (os.path.exists(output_dir))
         
         # Consultamos al usuario las dimensiones deseadas de las imágenes
-        desired_width = int(input("Introduce el ancho deseado de las imágenes: "))
-        desired_height = int(input("Introduce el alto deseado de las imágenes: "))
+        #desired_width = int(input("Introduce el ancho deseado de las imágenes: "))
+        #desired_height = int(input("Introduce el alto deseado de las imágenes: "))
+        
+        # Definimos las dimensiones deseadas de las imágenes
+        desired_width = 600
+        desired_height = 350
         
         # Verificamos que las dimensiones introducidas son válidas
         assert (desired_width > 0)

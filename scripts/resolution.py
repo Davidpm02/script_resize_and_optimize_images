@@ -57,7 +57,7 @@ def process_image(image_path, output_path, desired_width, desired_height):
             
             # Minifico la imagen resultante
             minify(os.path.join(output_path, new_image_name),
-                   os.path.join(output_path, new_image_name))
+                   output_path)
             
     except Exception as e:
         print(f'No ha sido posible procesar la imagen {image_name}: {e}')
